@@ -886,7 +886,7 @@
 
 	<modules>
 		<module>jersey</module>
-		<module>test</module>
+		<module>mybatis</module>
 	</modules>
 
 	<!--distributionManagement / -->
