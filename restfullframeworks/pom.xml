@@ -1,5 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>cn.77hz</groupId>
@@ -170,7 +170,7 @@
 						<sourceFileExcludes>
 							<exclude>bundles/**</exclude>
 						</sourceFileExcludes>
-						<verbose />
+						<verbose/>
 					</configuration>
 					<executions>
 						<execution>
@@ -672,7 +672,7 @@
 		<profile>
 			<id>securityOff</id>
 			<properties>
-				<surefire.security.argline />
+				<surefire.security.argline/>
 			</properties>
 		</profile>
 		<profile>
@@ -887,7 +887,9 @@
 	<modules>
 		<module>jersey</module>
 		<module>mybatis</module>
-	</modules>
+    <module>solr</module>
+    <module>zookeeperexample</module>
+  </modules>
 
 	<!--distributionManagement / -->
 
@@ -1287,7 +1289,15 @@
 				<artifactId>hsqldb</artifactId>
 				<version>${hsql.version}</version>
 			</dependency>
-			
+
+			<!-- LOG -->
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+
+
 			<!-- Weld -->
 
 			<dependency>
@@ -1437,7 +1447,7 @@
 		<!-- the exclude file cannot be here directly, as FindBugs would interpret 
 			the path as relative to each module; the default exclude filter file is at 
 			etc/config/findbugs-exclude.xml -->
-		<findbugs.exclude />
+		<findbugs.exclude/>
 		<findbugs.glassfish.logging.validLoggerPrefixes>
 			javax.enterprise
 		</findbugs.glassfish.logging.validLoggerPrefixes>
@@ -1448,8 +1458,8 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<release.tests.args>-Dmaven.test.skip=false</release.tests.args>
 		<skip.tests>false</skip.tests>
-		<xdk.absolute.path />
-		<surefire.security.argline />
+		<xdk.absolute.path/>
+		<surefire.security.argline/>
 
 		<!-- Dependency versions -->
 		<jersey.version>${project.version}</jersey.version>
@@ -1517,5 +1527,6 @@
 		<hsql.version>2.3.2</hsql.version>
 		<mybatis.version>3.3.0</mybatis.version>
 		<mybatis.spring.version>1.2.2</mybatis.spring.version>
+		<log4j.version>1.2.17</log4j.version>
 	</properties>
 </project>
