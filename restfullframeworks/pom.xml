@@ -887,8 +887,10 @@
 	<modules>
 		<module>jersey</module>
 		<module>mybatis</module>
-    <module>solr</module>
-    <module>zookeeperexample</module>
+		<module>solr</module>
+		<module>zookeeperexample</module>
+		<module>rabbitmq</module>
+    <module>thrift</module>
   </modules>
 
 	<!--distributionManagement / -->
@@ -1297,6 +1299,12 @@
 				<version>${log4j.version}</version>
 			</dependency>
 
+			<!-- RabbitMQ -->
+			<dependency>
+				<groupId>com.rabbitmq</groupId>
+				<artifactId>amqp-client</artifactId>
+				<version>${rabbitmq.version}</version>
+			</dependency>
 
 			<!-- Weld -->
 
@@ -1528,5 +1536,6 @@
 		<mybatis.version>3.3.0</mybatis.version>
 		<mybatis.spring.version>1.2.2</mybatis.spring.version>
 		<log4j.version>1.2.17</log4j.version>
+		<rabbitmq.version>3.5.3</rabbitmq.version>
 	</properties>
 </project>

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import javax.ws.rs.DefaultValue;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -16,6 +17,7 @@ import javax.ws.rs.core.UriInfo;
 import cn.hz.jersey.tomcat.AsynTasks.Task;
 
 @Path("helloworld")
+@Produces({ MediaType.APPLICATION_JSON })
 public class HelloWorld {
 	
 	@Context 
@@ -59,15 +61,15 @@ public class HelloWorld {
 	@POST
 	@Path("post")
     @Produces(MediaType.TEXT_PLAIN)
-    public String getPostParam(@FormParam("name") String name) {
-        return "Hello, " + name;
+    public String getPostParam(@FormParam("name") String name,
+    		@FormParam("a") @DefaultValue("0") Integer a) {
+        return "Hello, " + name + ", age : " + a;
     }
 	
 	@GET
 	@Path("entity")
-    @Produces({ MediaType.APPLICATION_JSON })
     public MyBean getEntity() {
         return new MyBean("wangxf", 27);
     }
-
+	
 }
