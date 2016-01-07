@@ -1,5 +1,7 @@
-/.settings/
-/.idea/
-/.classpath
-/restfullframeworks.iml
-/.project
+.settings/
+.idea/
+.classpath
+*.iml
+.project
+*.class
+target/
