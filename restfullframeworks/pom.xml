@@ -893,7 +893,8 @@
     <module>thrift</module>
     <module>validation</module>
     <module>aop</module>
-  </modules>
+		<module>netty</module>
+	</modules>
 
 	<!--distributionManagement / -->
 
@@ -1448,6 +1449,12 @@
 				<artifactId>kryo</artifactId>
 				<version>${kryo.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>io.netty</groupId>
+				<artifactId>netty-all</artifactId> <!-- Use 'netty-all' for 4.0 or above -->
+				<version>${netty.version}</version>
+				<scope>compile</scope>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -1539,5 +1546,6 @@
 		<mybatis.spring.version>1.2.2</mybatis.spring.version>
 		<log4j.version>1.2.17</log4j.version>
 		<rabbitmq.version>3.5.3</rabbitmq.version>
+		<netty.version>4.0.33.Final</netty.version>
 	</properties>
 </project>
