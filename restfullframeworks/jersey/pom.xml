@@ -7,10 +7,8 @@
 		<artifactId>restfullframeworks</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>cn.77hz</groupId>
 	<artifactId>jersey</artifactId>
 	<packaging>pom</packaging>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>jersey</name>
 	<url>http://blog.77hz.cn</url>
 	<properties>
@@ -39,13 +37,11 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.test-framework.providers</groupId>
 			<artifactId>jersey-test-framework-provider-inmemory</artifactId>
-			<version>${jersey.version}</version>
 			<scope>test</scope>
 		</dependency>
 

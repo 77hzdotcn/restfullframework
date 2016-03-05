@@ -1,4 +1,7 @@
 package cn.hz.rabbitmq;
+
+import com.rabbitmq.client.ConnectionFactory;
+
 public class Recv {
 
   private final static String QUEUE_NAME = "hello";

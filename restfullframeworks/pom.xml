@@ -25,6 +25,7 @@
 					<executions>
 						<execution>
 							<id>enforce-versions</id>
+							<phase>validate</phase>
 							<goals>
 								<goal>enforce</goal>
 							</goals>
@@ -894,7 +895,8 @@
     <module>validation</module>
     <module>aop</module>
 		<module>netty</module>
-	</modules>
+    <module>core-utils</module>
+  </modules>
 
 	<!--distributionManagement / -->
 
@@ -1468,7 +1470,7 @@
 		<findbugs.glassfish.logging.validLoggerPrefixes>
 			javax.enterprise
 		</findbugs.glassfish.logging.validLoggerPrefixes>
-		<java.version>1.7</java.version>
+		<java.version>1.8</java.version>
 		<jersey.repackaged.prefix>jersey.repackaged</jersey.repackaged.prefix>
 		<netbeans.hint.license>gf-cddl-gpl</netbeans.hint.license>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
