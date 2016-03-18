@@ -1,4 +1,4 @@
-package cn.hz.netty;
+package cn.hz.netty.echo;
 
 import io.netty.bootstrap.ServerBootstrap;
 
@@ -13,11 +13,11 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 /**
  * Discards any incoming data.
  */
-public class Server {
+public class EchoServer {
 
     private int port;
 
-    public Server(int port) {
+    public EchoServer(int port) {
         this.port = port;
     }
 
@@ -57,6 +57,6 @@ public class Server {
         } else {
             port = 8080;
         }
-        new Server(port).run();
+        new EchoServer(port).run();
     }
 }

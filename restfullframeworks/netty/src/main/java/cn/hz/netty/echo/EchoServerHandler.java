@@ -1,4 +1,4 @@
-package cn.hz.netty;
+package cn.hz.netty.echo;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
