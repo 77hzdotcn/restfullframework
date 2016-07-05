@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>cn.77hz</groupId>
-    <artifactId>restfullframeworks</artifactId>
+    <artifactId>base</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>cn.77hz</groupId>

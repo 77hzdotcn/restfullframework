@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>cn.77hz</groupId>
-	<artifactId>restfullframeworks</artifactId>
+	<artifactId>base</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>restfullframeworks</name>
+	<name>base</name>
 	<url>http://blog.77hz.cn</url>
 
 	<build>
