@@ -10,7 +10,7 @@ import javax.ws.rs.core.MediaType;
 
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component
 @Path("hello")
 public class JerseyResource {
     private static final Logger LOGGER = Logger.getLogger(JerseyResource.class.getName());

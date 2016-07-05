@@ -24,7 +24,7 @@
 	<context:annotation-config />
 	<bean id="aBean" class="cn.hz.aop.advice.LogAdvice"></bean>
 
-	<bean id="hello" class="cn.hz.aop.HelloImpl" />
+	<bean id="hello" class="cn.hz.aop.HelloImpl" lazy-init="true"/>
 
 	<bean class="cn.hz.aop.Man"></bean>
 

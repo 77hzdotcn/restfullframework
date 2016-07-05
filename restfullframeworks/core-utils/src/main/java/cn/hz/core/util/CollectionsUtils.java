@@ -1,6 +1,8 @@
-package cn.hz.core.utils;
+package cn.hz.core.util;
 
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -36,6 +38,21 @@ public class CollectionsUtils {
 			return retMap;
 		}
 		return null;
+	}
+
+	/**
+	 * 清除集合中的空元素
+	 * 
+	 * @param collection
+	 */
+	public static <E> void removeNullElement(Collection<E> collection) {
+		Iterator<E> it = collection.iterator();
+		if (it.hasNext()) {
+			E item = it.next();
+			if (item == null) {
+				it.remove();
+			}
+		}
 	}
 
 }
